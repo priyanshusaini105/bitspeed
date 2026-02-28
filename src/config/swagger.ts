@@ -1,8 +1,5 @@
 import swaggerJsdoc from "swagger-jsdoc";
 
-const PORT = process.env.PORT || 3000;
-const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
-
 const options: swaggerJsdoc.Options = {
     definition: {
         openapi: "3.0.0",
@@ -15,12 +12,6 @@ const options: swaggerJsdoc.Options = {
                 name: "Bitespeed",
             },
         },
-        servers: [
-            {
-                url: BASE_URL,
-                description: process.env.BASE_URL ? "Production" : "Local development",
-            },
-        ],
         tags: [
             {
                 name: "Identity",
